@@ -9,7 +9,7 @@ describe Rsync::Result do
   end
 
   it "should handle basic example with changes" do
-    result = Rsync::Result.new(">f......... filename\n", 0)
+    result = Rsync::Result.new(">f.......... filename\n", 0)
     result.changes.length.should eql(1)
     result.error.should eql("Success")
     result.success?.should eql(true)

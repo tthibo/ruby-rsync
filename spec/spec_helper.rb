@@ -17,7 +17,7 @@ class TempDir
   def tree
     #`cd #{@path}; tree -pugAD`
     #`cd #{@path}; find . -printf "%A@ %p\n"`
-    `cd #{@path}; find . -printf "%p\n"`
+    `cd #{@path}; find . -name "*"`
   end
 
   def mkdir(path)
